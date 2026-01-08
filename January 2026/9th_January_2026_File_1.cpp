@@ -1,0 +1,29 @@
+// Problem / Topic: https://codeforces.com/problemset/problem/1831/A
+
+/*
+    New learning: Find math pattern
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+
+    int t;
+    cin >> t;
+
+    while(t--){
+        int n;
+        cin >> n;
+
+        for (int i = 0; i < n; i++)
+        {
+            int m;
+            cin >> m;
+            cout << n+1-m << " ";
+        }
+        cout << endl;
+    }
+
+
+    return 0;
+}
