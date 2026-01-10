@@ -1,0 +1,44 @@
+// Problem / Topic: https://codeforces.com/problemset/problem/144/A
+
+/*
+    New learning: Thinking Changes Over time, it will take time
+*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+
+    int n;
+    cin >> n;
+
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        int x;
+        cin >> x;
+        arr[i] = x;
+    }
+    
+    int max = 0;
+    int min = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if(arr[i] > arr[max]) {
+            max = i;
+        }
+        if(arr[i] <= arr[min]){
+            min = i;
+        }
+    }
+    
+    if(max > min){
+        cout << (max+(n-1-min)-1);
+    }else{
+    cout << (max+(n-1-min));
+    }
+    
+    return 0;
+
+}
